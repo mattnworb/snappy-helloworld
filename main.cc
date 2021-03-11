@@ -15,7 +15,9 @@ int main(int argc, char** argv) {
 
   for (int i = 1; i < argc; i++) {
     input_string.append(argv[i]);
-    input_string.append(" ");
+    if (i < (argc - 1)) {
+      input_string.append(" ");
+    }
   }
 
   cout << "input has size=" << input_string.length() << ":" << endl;
